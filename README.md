@@ -40,7 +40,7 @@ The full guide, with the manifest, test cases and publishing: https://1weavr.com
 
 ## Questions
 
-Email support@1weavr.com, or open an issue on this repository.
+Email support@1weavr.com, or open an issue on this repository. Security reports go to security@1weavr.com.
 
 ## Licence
 
