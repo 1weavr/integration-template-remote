@@ -1,0 +1,76 @@
+{
+  "protocol": 2,
+  "id": "your-watcher",
+  "name": "Your watcher",
+  "version": "0.1.0",
+  "summary": "Tells your service about new and fixed captures, and shows what it says.",
+  "description": "Your server is told when a capture is made or fixed, and answers the facts shown on the capture (for example which release holds the fix).",
+  "icon": "icon.svg",
+  "categories": [
+    "chat"
+  ],
+  "links": {
+    "support": "mailto:help@your-service.example"
+  },
+  "runtime": {
+    "kind": "remote",
+    "endpoint": "https://hooks.your-service.example/hooks/captures"
+  },
+  "hosts": [
+    {
+      "host": "hooks.your-service.example",
+      "use": [
+        "fetch",
+        "link"
+      ],
+      "reason": "Your service: it is told about captures and says which release holds a fix."
+    }
+  ],
+  "connection": {
+    "kind": "none",
+    "owner": "workspace"
+  },
+  "contributes": {
+    "item.facts": {
+      "render": "deployFacts",
+      "input": {
+        "item": "summary",
+        "diagnostics": false,
+        "project": false
+      }
+    },
+    "item.activity": {}
+  },
+  "actions": {
+    "onMade": {},
+    "onFixed": {},
+    "deployFacts": {}
+  },
+  "events": {
+    "out": [
+      {
+        "type": "item.made",
+        "action": "onMade"
+      },
+      {
+        "type": "item.fixed",
+        "action": "onFixed"
+      }
+    ],
+    "in": null
+  },
+  "schedule": [],
+  "storage": {
+    "keys": []
+  },
+  "effects": [
+    "activity.add"
+  ],
+  "permissions": [
+    "activity.write",
+    "items.read"
+  ],
+  "locales": {
+    "default": "en"
+  }
+}

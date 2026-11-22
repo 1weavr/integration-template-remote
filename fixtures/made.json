@@ -1,0 +1,41 @@
+{
+  "name": "CAP-128 made",
+  "call": "event.deliver",
+  "input": {
+    "event": {
+      "id": "ev_1",
+      "type": "item.made",
+      "at": 1795310000000
+    },
+    "item": {
+      "id": "c_128",
+      "kind": "capture",
+      "ref": "CAP-128",
+      "projectId": "p_store",
+      "title": "Sale badge overlaps the price",
+      "description": "On narrow screens the red badge sits on top of the price.",
+      "status": "new",
+      "labels": [
+        "ui"
+      ],
+      "createdAt": 1795310000000,
+      "pictures": [
+        {
+          "role": "crop",
+          "url": "https://files.example/a/c_128/crop.png",
+          "contentType": "image/png",
+          "bytes": 48210
+        }
+      ],
+      "capture": {
+        "page": {
+          "url": "https://stride.shop/sale",
+          "title": "Sale"
+        },
+        "tool": "rect"
+      }
+    }
+  },
+  "http": [],
+  "expect": {}
+}
