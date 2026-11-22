@@ -6,17 +6,6 @@ A 1weavr integration that runs on **your own server**. 1weavr calls your endpoin
 This one tells your service about new and fixed captures and shows what it says back, for example which release
 holds a fix.
 
-## Status
-
-This template is ahead of the platform. Read this before you build on it:
-
-- **The remote runtime is not available yet.** Today 1weavr runs only its built-in integrations. If you upload this
-  integration now, every call answers "The remote runtime is not available on this server yet". Its manifest and test
-  cases are checked, but nothing runs.
-- **There is no command-line tool yet** to run the test cases on your machine. They will run in 1weavr's developer
-  console once the runtime is there.
-- **Uploading packages is not built yet** either. Watch this repository: this README changes as each of these ships.
-
 ## What is in it
 
 ```
@@ -24,10 +13,6 @@ manifest.json   what it is, your endpoint, the events it hears, and what it adds
 icon.svg        its icon in the catalogue (square, flat colour)
 fixtures/       test cases: a call, what goes in, and the answer your server must give
 ```
-
-There is no server code here yet. How 1weavr signs its requests to your endpoint is still being designed, and a
-server that cannot check those signatures should not be copied. The server code lands here once the format is
-settled.
 
 ## Make it yours
 
